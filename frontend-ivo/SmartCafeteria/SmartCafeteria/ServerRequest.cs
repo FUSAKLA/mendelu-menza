@@ -18,7 +18,7 @@ namespace SmartCafeteria
 			this.method = method;
 		}
 
-		public void run(Action<string> callback)
+		public void Run(Action<string> callback)
 		{
 			Task task = GetResponseString(callback);
 		}
@@ -27,13 +27,13 @@ namespace SmartCafeteria
 		{
 			httpClient = new HttpClient();
 
-			var response = await sendRequest();
+			var response = await SendRequest();
 			var contents = await response.Content.ReadAsStringAsync();
 
 			callback(contents);
 		}
 
-		private Task<HttpResponseMessage> sendRequest()
+		private Task<HttpResponseMessage> SendRequest()
 		{
 			switch (method)
 			{

@@ -12,42 +12,20 @@ namespace SmartCafeteria
 {
 	public partial class SmartCafeteriaPage : ContentPage
 	{
-		//string resultBody = "nic";
-
 		public SmartCafeteriaPage()
 		{
 			InitializeComponent();
 
 			ahoj.Text = "Xamathon je super!!!";
-			//Task task = GetResponseString(handler);
 
-			ServerRequest request = new ServerRequest("http://mendelu.cz", "", Method.GET);
-			request.run(handler);
-
-		}
-		/*
-		async void ProcessRequest()
-		{
-			Task<string> task = GetResponseString();
-			string result = task.Result;
-			ahoj.Text = result;
-		}*/
-		/*
-		async Task GetResponseString(Action<string> callback)
-		{
-			var httpClient = new HttpClient();
-
-			var response = await httpClient.GetAsync("http://pisarovic.cz");
-			var contents = await response.Content.ReadAsStringAsync();
-
-			callback(contents);
-
-			//return contents;
-		}
-		*/
-		void handler(string content)
-		{
-			ahoj.Text = content;
+			Sync sync = new Sync(1);
+			sync.sendTest((string obj, int[] data) => {
+				ahoj.Text = obj;
+				for (int i = 0; i < data.Length; i++)
+				{
+					ahoj.Text += data[i];
+				}
+			});
 		}
 	}
 }
