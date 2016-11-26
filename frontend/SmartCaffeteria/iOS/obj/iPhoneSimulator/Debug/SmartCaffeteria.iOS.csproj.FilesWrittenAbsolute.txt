@@ -13,3 +13,5 @@
 /Users/davidprochazka/GIT/MENDELU_menza/frontend/SmartCaffeteria/iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Xaml.dll
 /Users/davidprochazka/GIT/MENDELU_menza/frontend/SmartCaffeteria/iOS/bin/iPhoneSimulator/Debug/SmartCaffeteria.dll
 /Users/davidprochazka/GIT/MENDELU_menza/frontend/SmartCaffeteria/iOS/bin/iPhoneSimulator/Debug/SmartCaffeteria.dll.mdb
+/Users/davidprochazka/GIT/MENDELU_menza/frontend/SmartCaffeteria/iOS/bin/iPhoneSimulator/Debug/ModernHttpClient.dll
+/Users/davidprochazka/GIT/MENDELU_menza/frontend/SmartCaffeteria/iOS/bin/iPhoneSimulator/Debug/Newtonsoft.Json.dll

@@ -20,32 +20,32 @@ namespace SmartCaffeteria
 		private void CreateHistoryModel()
 		{
 			/// Get the key value pairs with predicted times
-			List<HistoryWeek> historyWeeks = new List<HistoryWeek>();
+			List<HistoryObject> historyWeeks = new List<HistoryObject>();
 
-			historyWeeks.Add(new HistoryWeek()
+			historyWeeks.Add(new HistoryObject()
 			{
-				week = 1,
-				average_waiting_time = 30,
+				week_id = 1,
+				queue_time = 30,
 				level = 1
 			});
-			historyWeeks.Add(new HistoryWeek()
+			historyWeeks.Add(new HistoryObject()
 			{
-				week = 2,
-				average_waiting_time = 20,
+				week_id = 2,
+				queue_time = 20,
 				level = 1
 			}); 
 
-			historyWeeks.Add(new HistoryWeek()
+			historyWeeks.Add(new HistoryObject()
 			{
-				week = 3,
-				average_waiting_time = 50,
+				week_id = 3,
+				queue_time = 50,
 				level = 2
 			}); 
 
-			historyWeeks.Add(new HistoryWeek()
+			historyWeeks.Add(new HistoryObject()
 			{
-				week = 4,
-				average_waiting_time = 60,
+				week_id = 4,
+				queue_time = 60,
 				level = 3
 			});
 
@@ -64,7 +64,7 @@ namespace SmartCaffeteria
 
 				var weekLabel = new Label()
 				{
-					Text = week.week.ToString() + " weeks back ",
+					Text = week.week_id.ToString() + " weeks back ",
 					FontSize = 14,
 					HorizontalOptions = LayoutOptions.Start,
 					VerticalOptions = LayoutOptions.CenterAndExpand,
@@ -80,7 +80,7 @@ namespace SmartCaffeteria
 
 				var timeLabel = new Label()
 				{
-					Text = week.average_waiting_time.ToString(),
+					Text = week.queue_time.ToString(),
 					FontSize = 24,
 					HorizontalOptions = LayoutOptions.Center,
 					VerticalOptions = LayoutOptions.CenterAndExpand,
