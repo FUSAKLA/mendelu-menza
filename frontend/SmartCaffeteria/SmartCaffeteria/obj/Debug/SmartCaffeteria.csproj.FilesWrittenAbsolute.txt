@@ -1,0 +1,14 @@
+/Users/davidprochazka/GIT/MENDELU_menza/frontend/SmartCaffeteria/SmartCaffeteria/obj/Debug/.NETPortable,Version=v4.5,Profile=Profile259.AssemblyAttribute.cs
+/Users/davidprochazka/GIT/MENDELU_menza/frontend/SmartCaffeteria/SmartCaffeteria/obj/Debug/SmartCaffeteria.App.xaml
+/Users/davidprochazka/GIT/MENDELU_menza/frontend/SmartCaffeteria/SmartCaffeteria/obj/Debug/SmartCaffeteria.SmartCaffeteriaPage.xaml
+/Users/davidprochazka/GIT/MENDELU_menza/frontend/SmartCaffeteria/SmartCaffeteria/obj/Debug/SmartCaffeteria.App.xaml.g.cs
+/Users/davidprochazka/GIT/MENDELU_menza/frontend/SmartCaffeteria/SmartCaffeteria/obj/Debug/SmartCaffeteria.SmartCaffeteriaPage.xaml.g.cs
+/Users/davidprochazka/GIT/MENDELU_menza/frontend/SmartCaffeteria/SmartCaffeteria/bin/Debug/SmartCaffeteria.dll.mdb
+/Users/davidprochazka/GIT/MENDELU_menza/frontend/SmartCaffeteria/SmartCaffeteria/bin/Debug/SmartCaffeteria.dll
+/Users/davidprochazka/GIT/MENDELU_menza/frontend/SmartCaffeteria/SmartCaffeteria/obj/Debug/SmartCaffeteria.dll
+/Users/davidprochazka/GIT/MENDELU_menza/frontend/SmartCaffeteria/SmartCaffeteria/obj/Debug/SmartCaffeteria.dll.mdb
+/Users/davidprochazka/GIT/MENDELU_menza/frontend/SmartCaffeteria/SmartCaffeteria/bin/Debug/Xamarin.Forms.Core.dll
+/Users/davidprochazka/GIT/MENDELU_menza/frontend/SmartCaffeteria/SmartCaffeteria/bin/Debug/Xamarin.Forms.Platform.dll
+/Users/davidprochazka/GIT/MENDELU_menza/frontend/SmartCaffeteria/SmartCaffeteria/bin/Debug/Xamarin.Forms.Xaml.dll
+/Users/davidprochazka/GIT/MENDELU_menza/frontend/SmartCaffeteria/SmartCaffeteria/obj/Debug/SmartCaffeteria.Detail.xaml
+/Users/davidprochazka/GIT/MENDELU_menza/frontend/SmartCaffeteria/SmartCaffeteria/obj/Debug/SmartCaffeteria.Detail.xaml.g.cs

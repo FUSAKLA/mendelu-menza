@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{00DC4501-D127-4D38-B085-AC36EB16DC1A}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SmartCaffeteria/SmartCaffeteriaPage.xaml">
+    <Files>
+      <File FileName="SmartCaffeteria/SmartCaffeteriaPage.xaml.cs" Line="39" Column="30" />
+      <File FileName="SmartCaffeteria/obj/Debug/SmartCaffeteria.SmartCaffeteriaPage.xaml.g.cs" Line="1" Column="1" />
+      <File FileName="SmartCaffeteria/SmartCaffeteriaPage.xaml" Line="11" Column="26" />
+      <File FileName="SmartCaffeteria/Detail.xaml" Line="2" Column="146" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.SmartCaffeteria.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.E09B3A29-FE83-4972-8B66-97E9DE78FB67" />
+</Properties>
