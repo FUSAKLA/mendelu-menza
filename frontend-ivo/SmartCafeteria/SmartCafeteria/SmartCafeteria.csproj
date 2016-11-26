@@ -43,6 +43,11 @@
     <Compile Include="Method.cs" />
     <Compile Include="Sync.cs" />
     <Compile Include="TestObject.cs" />
+    <Compile Include="BeaconHitObject.cs" />
+    <Compile Include="HistoryObject.cs" />
+    <Compile Include="HistoryObjects.cs" />
+    <Compile Include="IntervalObjects.cs" />
+    <Compile Include="IntervalObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace SmartCafeteria
@@ -20,7 +21,7 @@ namespace SmartCafeteria
 
 		public void Run(Action<string> callback)
 		{
-			Task task = GetResponseString(callback);
+			GetResponseString(callback);
 		}
 
 		async Task GetResponseString(Action<string> callback)
@@ -40,9 +41,11 @@ namespace SmartCafeteria
 				case Method.GET:
 					return httpClient.GetAsync(URL);
 				case Method.POST:
-				return httpClient.PostAsync(URL, null);
+					var content = new StringContent(body, Encoding.UTF8, "application/json");
+					return httpClient.PostAsync(URL, content);
 				case Method.PUT:
-					return httpClient.PutAsync(URL, null);
+					var content2 = new StringContent(body, Encoding.UTF8, "application/json");
+					return httpClient.PutAsync(URL, content2);
 				case Method.DELETE:
 					return httpClient.DeleteAsync(URL);
 			}

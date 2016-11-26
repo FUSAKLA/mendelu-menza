@@ -1,11 +1,16 @@
 ﻿<Properties StartupConfiguration="{EB99C49D-93E6-45A9-B65A-28FD6093937C}|Default">
   <MonoDevelop.Ide.ItemProperties.SmartCafeteria.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SmartCafeteria/SmartCafeteriaPage.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SmartCafeteria/IntervalObject.cs">
     <Files>
-      <File FileName="SmartCafeteria/SmartCafeteriaPage.xaml.cs" Line="15" Column="27" />
-      <File FileName="SmartCafeteria/ServerRequest.cs" Line="35" Column="3" />
-      <File FileName="SmartCafeteria/Sync.cs" Line="16" Column="3" />
+      <File FileName="SmartCafeteria/SmartCafeteriaPage.xaml.cs" Line="30" Column="9" />
+      <File FileName="SmartCafeteria/ServerRequest.cs" Line="25" Column="4" />
+      <File FileName="SmartCafeteria/Sync.cs" Line="10" Column="3" />
       <File FileName="SmartCafeteria/TestObject.cs" Line="7" Column="10" />
+      <File FileName="SmartCafeteria/BeaconHitObject.cs" Line="9" Column="3" />
+      <File FileName="SmartCafeteria/HistoryWeekObject.cs" Line="4" Column="21" />
+      <File FileName="SmartCafeteria/HistoryObjects.cs" Line="5" Column="3" />
+      <File FileName="SmartCafeteria/IntervalObjects.cs" Line="5" Column="3" />
+      <File FileName="SmartCafeteria/IntervalObject.cs" Line="6" Column="16" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
