@@ -67,7 +67,7 @@ namespace SmartCaffeteria
 					WidthRequest = 300
 				};
 
-				button.Clicked += (sender, e) => { Navigation.PushAsync(new StatisticsDetail()); };
+				button.Clicked += (sender, e) => { Navigation.PushAsync(new StatisticsDetail(time.start_time.Replace(":","-"))); };
 
 				hours.Children.Add(button);
 			}

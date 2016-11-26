@@ -7,11 +7,11 @@ namespace SmartCaffeteria
 {
 	public partial class StatisticsDetail : ContentPage
 	{
-		public StatisticsDetail()
+		public StatisticsDetail(String time)
 		{
 			InitializeComponent();
 			Sync syncInterface = new Sync(1);
-			syncInterface.GetHistory("12_11_10",CreateHistoryModel);
+			syncInterface.GetHistory(time, CreateHistoryModel);
 		}
 
 		/// <summary>
