@@ -10,7 +10,7 @@ namespace SmartCaffeteria
 		public StatisticsDetail(String time)
 		{
 			InitializeComponent();
-			Sync syncInterface = new Sync(1);
+			Sync syncInterface = new Sync();
 			syncInterface.GetHistory(time, CreateHistoryModel);
 		}
 

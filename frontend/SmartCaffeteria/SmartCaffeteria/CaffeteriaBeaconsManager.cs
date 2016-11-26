@@ -34,7 +34,7 @@ namespace SmartCaffeteria
 		//Odesle info o beaconech. TADY JE VOLANI NA SERVER!
 		private void sendBeaconInfo(int beaconID, IBeacon beacon)
 		{
-			Sync syncManager = new Sync(1);
+			Sync syncManager = new Sync();
 			syncManager.SendIBeaconRecord(beaconID.ToString(), DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
 		}
 

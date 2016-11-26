@@ -1,20 +1,22 @@
 ﻿using System;
 using Newtonsoft.Json;
+using Plugin.DeviceInfo;
 
 namespace SmartCaffeteria
 {
 	public class Sync
 	{
 		const string baseURL = "http://mendelu-menza.azurewebsites.net/";
+		private string deviceId = CrossDeviceInfo.Current.Id;
 		public int userId;
 
 		private Action<string, int[]> testCallback;
 		private Action<IntervalObject[]> predictionCallback;
 		private Action<HistoryObject[]> historyCallback;
 
-		public Sync(int userId)
+		public Sync()
 		{
-			this.userId = userId;
+			
 		}
 
 		/* --- TEST --- */
@@ -36,7 +38,7 @@ namespace SmartCaffeteria
 		{
 			BeaconHitObject obj = new BeaconHitObject();
 			obj.beacon_id = UUID;
-			obj.user_id = userId;
+			obj.user_id = deviceId;
 			obj.hit_time = hitTime;
 			var json = JsonConvert.SerializeObject(obj);
 			ServerRequest request = new ServerRequest(baseURL + "beacon_hit", json, Method.PUT);
