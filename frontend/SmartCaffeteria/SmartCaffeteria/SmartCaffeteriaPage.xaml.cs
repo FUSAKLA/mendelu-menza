@@ -13,51 +13,7 @@ namespace SmartCaffeteria
 			CreateHourModel();
 		}
 
-		private void OnButtonClicked(object sender, EventArgs args)
-		{
-			
-		}
 
-		/// <summary>
-		/// Generates color that describes the waiting time in the caffeteria queue
-		/// </summary>
-		/// <returns>The color for given waiting time.</returns>
-		/// <param name="level">Level that describes the waiting time</param>
-		private Color getColorForLevel(int level)
-		{
-			switch (level)
-			{
-				case 0:
-					return Color.Green;
-				case 1:
-					return Color.Yellow;
-				case 2:
-					return Color.Red;
-				default:
-					return Color.Gray;
-			}
-
-		}
-
-		/// <summary>
-		/// Generates text description of the waiting time in the caffeteria queue
-		/// </summary>
-		/// <returns>The text description for given waiting time.</returns>
-		/// <param name="level">Level that describes the waiting time</param>
-		private String getDescriptionForLevel(int level)
-		{
-			switch (level)
-			{
-				case 0:
-					return "Go there!";
-				case 1:
-					return "It's bearable...";
-				case 2:
-					return "Stay hungry.";
-				default:
-					return "What the heck?";
-			}
-		}
 
 		/// <summary>
 		/// Created rectangles that describes approx. waiting times in the queue
@@ -66,9 +22,9 @@ namespace SmartCaffeteria
 		{
 			/// Get the key value pairs with predicted times
 			Dictionary<String, int> queueTimes = new Dictionary<String, int>();
-			queueTimes.Add("12 a.m.", 0);
-			queueTimes.Add("13 a.m.", 1);
-			queueTimes.Add("14 a.m.", 2);
+			queueTimes.Add("12 a.m.", 1);
+			queueTimes.Add("13 a.m.", 2);
+			queueTimes.Add("14 a.m.", 3);
 
 			/// If there are any objects in the container, remove them.
 			hours.Children.Clear();
@@ -94,7 +50,7 @@ namespace SmartCaffeteria
 
 				var descriptionLabel = new Label()
 				{
-					Text = getDescriptionForLevel(time.Value),
+					Text = Level.getDescriptionForLevel(time.Value),
 					FontSize = 14,
 					HorizontalOptions = LayoutOptions.EndAndExpand
 				};
@@ -107,13 +63,13 @@ namespace SmartCaffeteria
 				/// Then create button that represents the waiting color
 				var button = new Button()
 				{
-					BackgroundColor = getColorForLevel(time.Value),
+					BackgroundColor = Level.getColorForLevel(time.Value),
 					BorderRadius = 0,
 					HeightRequest = 70,
 					WidthRequest = 300
 				};
 
-				button.Clicked += (sender, e) => { Navigation.PushAsync(new Detail()); };
+				button.Clicked += (sender, e) => { Navigation.PushAsync(new StatisticsDetail()); };
 
 				hours.Children.Add(button);
 			}

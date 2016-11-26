@@ -30,7 +30,7 @@
   <ItemGroup>
     <EmbeddedResource Include="App.xaml" />
     <EmbeddedResource Include="SmartCaffeteriaPage.xaml" />
-    <EmbeddedResource Include="Detail.xaml">
+    <EmbeddedResource Include="StatisticsDetail.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
@@ -42,9 +42,11 @@
       <DependentUpon>SmartCaffeteriaPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Detail.xaml.cs">
-      <DependentUpon>Detail.xaml</DependentUpon>
+    <Compile Include="StatisticsDetail.xaml.cs">
+      <DependentUpon>StatisticsDetail.xaml</DependentUpon>
     </Compile>
+    <Compile Include="HistoryWeek.cs" />
+    <Compile Include="Level.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
