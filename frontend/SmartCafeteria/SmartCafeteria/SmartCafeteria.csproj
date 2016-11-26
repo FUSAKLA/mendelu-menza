@@ -39,6 +39,8 @@
       <DependentUpon>SmartCafeteriaPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CafeteriaBeacon.cs" />
+    <Compile Include="CafeteriaBeaconsManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">

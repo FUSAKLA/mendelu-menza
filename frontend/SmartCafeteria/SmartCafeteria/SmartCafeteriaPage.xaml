@@ -1,4 +1,17 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:SmartCafeteria" x:Class="SmartCafeteria.SmartCafeteriaPage">
-	<Label Text="Welcome to Xamarin Forms!" VerticalOptions="Center" HorizontalOptions="Center" x:Name="test" />
+
+	<StackLayout Spacing="10" x:Name="layout" Orientation="Vertical">
+
+
+	<Label Text="Welcome to Xamarin Forms!" VerticalOptions="Center" 
+		HorizontalOptions="Center" x:Name="connectionStatus" />
+
+	<Label Text="Welcome to Xamarin Forms!" VerticalOptions="Start" 
+		HorizontalOptions="Center" x:Name="beacon1" />
+
+	<Label Text="Welcome to Xamarin Forms!" VerticalOptions="End" 
+		HorizontalOptions="Center" x:Name="beacon2" />
+		</StackLayout>
+	
 </ContentPage>

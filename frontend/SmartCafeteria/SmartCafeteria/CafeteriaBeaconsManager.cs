@@ -1,33 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using Estimotes;
-using Xamarin.Forms;
 
 namespace SmartCafeteria
 {
-	public partial class SmartCafeteriaPage : ContentPage
+	public class CafeteriaBeaconsManager
 	{
-
-
 		Dictionary<int, CafeteriaBeacon> listOfBeacons = new Dictionary<int, CafeteriaBeacon>();
 
-		private int counter = 0;
 
-		private int rangedCounter = 0;
-
-		CafeteriaBeaconsManager manager;
-
-		public SmartCafeteriaPage()
+		public CafeteriaBeaconsManager()
 		{
-			InitializeComponent();
-			manager = new CafeteriaBeaconsManager();
-
-			//initBeacons();
-
+			initBeacons();
 		}
 
-		/*
 		private async void initBeacons()
 		{
 			var status = await EstimoteManager.Instance.Initialize(); // optionally pass false to authorize foreground ranging only	
@@ -45,65 +31,24 @@ namespace SmartCafeteria
 			EstimoteManager.Instance.Ranged += OnBeaconsRanged;
 		}
 
-
-
 		//Odesle info o beaconech. TADY JE VOLANI NA SERVER!
 		private void sendBeaconInfo(int beaconID, IBeacon beacon)
 		{
 
-			if (beaconID == 1)
-			{
-				beacon1.Text = "(" + counter + ")" + "Beacon 1 Send";
-				counter++;
-			}
-
-			if (beaconID == 2)
-			{
-				beacon2.Text = "(" + counter + ")" + "Beacon 2 Send";
-				counter++;
-			}
-
-		
 		}
 
 		async void OnBeaconsRanged(object sender, System.Collections.Generic.IEnumerable<IBeacon> e)
 		{
-			connectionStatus.Text = rangedCounter + " ranged";
-			rangedCounter++;
-
-			bool beaconOneFound = false;
-			bool beaconTwoFound = false;
-
 			foreach (var beacon in e)
 			{
 				int beaconID = beacon.Minor;
-				//int beaconID = beaconFound(beacon);
 				if (beaconID != -1)
 				{
 					if (shouldSendBeaconInfo(beaconID, beacon))
 					{
 						sendBeaconInfo(beaconID, beacon);
 					}
-					if (beaconID == 1)
-					{
-						beaconOneFound = true;
-					}
-
-					if (beaconID == 2)
-					{
-						beaconTwoFound = true;
-					}
-
 				}
-				//beaconFound(beacon);
-			}
-			if (!beaconOneFound)
-			{
-				beacon1.Text = "Not detected";
-			}
-			if (!beaconTwoFound)
-			{
-				beacon2.Text = "Not detected";
 			}
 		}
 
@@ -129,6 +74,5 @@ namespace SmartCafeteria
 				return true;
 			}
 		}
-		*/
 	}
 }
