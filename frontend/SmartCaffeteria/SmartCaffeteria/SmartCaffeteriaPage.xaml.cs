@@ -13,6 +13,7 @@ namespace SmartCaffeteria
 			InitializeComponent();
 			Sync syncInterface = new Sync(1);
 			syncInterface.GetPrediction(CreateHourModel);
+			CaffeteriaBeaconsManager manager = new CaffeteriaBeaconsManager();
 		}
 
 		/// <summary>
