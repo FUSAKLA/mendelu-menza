@@ -10,44 +10,17 @@ namespace SmartCaffeteria
 		public StatisticsDetail()
 		{
 			InitializeComponent();
-			CreateHistoryModel();
+			Sync syncInterface = new Sync(1);
+			syncInterface.GetHistory("12_11_10",CreateHistoryModel);
 		}
-
 
 		/// <summary>
 		/// Created rectangles that describes approx. waiting times in the queue
 		/// </summary>
-		private void CreateHistoryModel()
+		private void CreateHistoryModel(HistoryObject[] result)
 		{
 			/// Get the key value pairs with predicted times
-			List<HistoryObject> historyWeeks = new List<HistoryObject>();
-
-			historyWeeks.Add(new HistoryObject()
-			{
-				week_id = 1,
-				queue_time = 30,
-				level = 1
-			});
-			historyWeeks.Add(new HistoryObject()
-			{
-				week_id = 2,
-				queue_time = 20,
-				level = 1
-			}); 
-
-			historyWeeks.Add(new HistoryObject()
-			{
-				week_id = 3,
-				queue_time = 50,
-				level = 2
-			}); 
-
-			historyWeeks.Add(new HistoryObject()
-			{
-				week_id = 4,
-				queue_time = 60,
-				level = 3
-			});
+			HistoryObject[] historyWeeks = result;
 
 			/// If there are any objects in the container, remove them.
 			weeksInHistory.Children.Clear();

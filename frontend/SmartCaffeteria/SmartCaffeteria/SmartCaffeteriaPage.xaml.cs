@@ -7,24 +7,22 @@ namespace SmartCaffeteria
 {
 	public partial class SmartCaffeteriaPage : ContentPage
 	{
+
 		public SmartCaffeteriaPage()
 		{
 			InitializeComponent();
-			CreateHourModel();
+			Sync syncInterface = new Sync(1);
+			syncInterface.GetPrediction(CreateHourModel);
 		}
-
-
 
 		/// <summary>
 		/// Created rectangles that describes approx. waiting times in the queue
 		/// </summary>
-		private void CreateHourModel()
+		private void CreateHourModel(IntervalObject[] result)
 		{
 			/// Get the key value pairs with predicted times
-			Dictionary<String, int> queueTimes = new Dictionary<String, int>();
-			queueTimes.Add("12 a.m.", 1);
-			queueTimes.Add("13 a.m.", 2);
-			queueTimes.Add("14 a.m.", 3);
+			             
+			IntervalObject[] queueTimes = result;
 
 			/// If there are any objects in the container, remove them.
 			hours.Children.Clear();
@@ -42,7 +40,7 @@ namespace SmartCaffeteria
 
 				var timelLabel = new Label()
 				{
-					Text = time.Key,
+					Text = time.start_time,
 					FontSize = 14,
 					HorizontalOptions = LayoutOptions.Start,
 					FontAttributes = FontAttributes.Bold
@@ -50,7 +48,7 @@ namespace SmartCaffeteria
 
 				var descriptionLabel = new Label()
 				{
-					Text = Level.getDescriptionForLevel(time.Value),
+					Text = Level.getDescriptionForLevel(time.level),
 					FontSize = 14,
 					HorizontalOptions = LayoutOptions.EndAndExpand
 				};
@@ -63,7 +61,7 @@ namespace SmartCaffeteria
 				/// Then create button that represents the waiting color
 				var button = new Button()
 				{
-					BackgroundColor = Level.getColorForLevel(time.Value),
+					BackgroundColor = Level.getColorForLevel(time.level),
 					BorderRadius = 0,
 					HeightRequest = 70,
 					WidthRequest = 300
