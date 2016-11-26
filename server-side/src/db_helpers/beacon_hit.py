@@ -19,6 +19,25 @@ def insert_beacon_hit(user_id: int, beacon_id: str, hit_time: datetime):
     )
 
 
+def get_user_last_hit(user_id: int):
+    beacon_hits = get_beacon_hit_collection()
+    res = beacon_hits.find(
+        {
+            "user_id": user_id
+        }
+    )
+    return res
+
+
+def delete_hits_by_user_id(user_id):
+    beacon_hits = get_beacon_hit_collection()
+    beacon_hits.remove(
+        {
+            "user_id": user_id
+        }
+    )
+
+
 def get_ordered_user_hits_per_last_n_minutes(minutes: int) -> dict:
     beacon_hits = get_beacon_hit_collection()
     limit_time = datetime.now() - timedelta(minutes=minutes)
@@ -41,3 +60,9 @@ def get_ordered_user_hits_per_last_n_minutes(minutes: int) -> dict:
         ]
     )
     return aggregated_data
+
+
+def delete_db():
+    g.mongo_db.mendelu_menza.drop_collection('beacon_hits')
+    g.mongo_db.mendelu_menza.drop_collection('entry')
+    g.mongo_db.mendelu_menza.drop_collection('exit')
