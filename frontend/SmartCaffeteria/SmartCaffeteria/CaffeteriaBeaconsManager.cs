@@ -43,7 +43,7 @@ namespace SmartCaffeteria
 			foreach (var beacon in e)
 			{
 				int beaconID = beacon.Minor;
-				if (beaconID != -1)
+				if (beaconID != -1 && beacon.Major == 2513)
 				{
 					if (shouldSendBeaconInfo(beaconID, beacon))
 					{

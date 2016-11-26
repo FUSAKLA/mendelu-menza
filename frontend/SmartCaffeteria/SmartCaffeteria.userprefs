@@ -1,5 +1,9 @@
 ﻿<Properties StartupConfiguration="{C3E52B49-418A-45C4-AB41-E31EFB6CEE06}|Default">
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="SmartCaffeteria/CaffeteriaBeaconsManager.cs">
+    <Files>
+      <File FileName="SmartCaffeteria/CaffeteriaBeaconsManager.cs" Line="45" Column="33" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
